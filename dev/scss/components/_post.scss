@@ -1,24 +1,25 @@
-.post{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid $greyColor;
-    padding: $freeSpace;
-    border: 1px solid $greyColor;
-    margin-bottom: $freeSpace;
-    background-color: $whiteColor;
-.top{
-    h2{
-        margin-top: 0;
+.post {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $greyColor;
+  padding: $freeSpace;
+  margin-bottom: $freeSpace;
+  background-color: $whiteColor;
+
+  .top {
+    h2 {
+      margin-top: 0;
     }
-}
-.body{
-    p{
-        text-align: justify;
+  }
+  .body {
+    p {
+      text-align: justify;
     }
-}
-.bottom{
+  }
+
+  .bottom {
     font-size: 0.9em;
     display: flex;
     justify-content: space-between;
-}
+  }
 }

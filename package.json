@@ -1,24 +1,30 @@
 {
-  "name": "gravitzapa",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "boTod",
+  "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
-    "nodemon": "gulp",
-    "dev": "gulp"
+    "start": "cross-env PORT=3001 node index.js",
+    "dev": "gulp & nodemon index.js"
   },
   "dependencies": {
-    "browser-sync": "^2.23.6",
-    "eslint": "^4.19.1",
+    "body-parser": "^1.18.2",
+    "cross-env": "^5.1.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "jquery": "^3.3.1",
+    "mongoose": "^4.13.7",
+    "static-asset": "^0.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.13.1",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^5.2.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cssnano": "^2.1.3",
     "gulp-plumber": "^1.2.0",
     "gulp-sass": "^4.0.1",
-    "npm": "^6.0.0",
-    "to": "^0.2.9",
-    "update": "^0.7.4"
+    "nodemon": "^1.13.3"
   },
   "engines": {
     "node": ">=6.0.0"
