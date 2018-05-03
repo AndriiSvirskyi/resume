@@ -3,40 +3,44 @@
   <div class="main">
     <div class="container">
       <div class="content">
-        <div class="post">
-          <div class="top">
-            <h2>Заголовок</h2>
-          </div>
-          <div class="body">
-            <p>
-              Lorem dolor sit amet, consectetur adipisicing elit. Impedit consectetur tempore illum dicta iste itaque voluptates facilis error quas debitis!
-            </p>
-          </div>
-          <div class="bottom">
-            <div class="author">
-              Автор:
-              <a href="/">Андрій</a>
+        <% for (var i=0; i< posts.length; i++) {%>
+          <div class="post">
+              <div class="top">
+                <h2>
+                  <a href="/posts/<%=posts[i].url %>">
+                  <%=posts[i].title %>
+                </a>
+                  </h2>
+              </div>
+              <div class="body">
+                <p>
+                    <%= posts[i].body %>
+                </p>
+              </div>
+              <div class="bottom">
+                <div class="author">
+                  Автор:
+                  <a href="/">Андрій</a>
+                </div>
+                <a href="/">Коментар</a>
+              </div>
             </div>
-            <a href="/">Коментар</a>
-          </div>
+          <% } %>
+            <div class="pagination">
+                <% if(current > 2) { %>
+                  <a class='new' href="/archive/<%= Number(current) - 1 %>">Вперед </a>
+              <% } %>
+
+              <% if (current == 2) { %>
+                  <a class="new" href="/">На головну </a>
+              <% } %>
+
+              <% if(pages > 0 && current < pages) { %>
+                <a class='old' href="/archive/<%= Number(current) + 1 %>">Назад </a>
+            <% } %>
+         
         </div>
-        <div class="post">
-          <div class="top">
-            <h2>Заголовок</h2>
-          </div>
-          <div class="body">
-            <p>
-             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus atque saepe consequatur repellendus possimus iure, similique quidem amet culpa eligendi minima et incidunt aspernatur eius explicabo facere fugiat ratione consequuntur!
-          </p>
-          </div>
-          <div class="bottom">
-            <div class="author">
-              Автор:
-              <a href="/">Андрій</a>
-            </div>
-            <a href="/">Коментарі</a>
-          </div>
-        </div>
+        
       </div>
 
       <% include layout/sidebar.ejs %>
