@@ -40,19 +40,19 @@ router.post('/add', (req, res) => {
 
       res.json({
         ok: false,
-        error: 'Все поля должны быть заполнены!',
+        error: 'Усі поля повинні бути заповнені!',
         fields
       });
     } else if (title.length < 3 || title.length > 64) {
       res.json({
         ok: false,
-        error: 'Длина заголовка от 3 до 64 символов!',
+        error: 'Довжина заголовка від 3 до 64 символів!',
         fields: ['title']
       });
     } else if (body.length < 3) {
       res.json({
         ok: false,
-        error: 'Текст не менее 3х символов!',
+        error: 'Довжина тексту не менше 3 символів',
         fields: ['body']
       });
     } else {
